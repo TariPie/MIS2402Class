@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 3-3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style> .btn{border:1px solid black; padding:5px;display:inline-block} </style>
+</head>
+<body>
+    <!-- **************************************************************************************** -->
+    <!-- *                                                                                      * -->
+    <!-- * Nothing to change here in the <body>                                                 * -->
+    <!-- *                                                                                      * -->
+    <!-- **************************************************************************************** -->
+
+	<h1>Address</h1>
+
+	<p>Enter your address into the following text boxes.</p>
+
+	<p>What is your name?             <input type="text" id="textEntered1"></p>
+	<p>What is your street address?   <input type="text" id="textEntered2"></p>
+	<p>What is your city?             <input type="text" id="textEntered3"></p>
+	<p>What is your state?            <input type="text" id="textEntered4"></p>
+	<p>What is your zipcode?          <input type="text" id="textEntered5"></p>
+	<p>What is your telephone number? <input type="text" id="textEntered6"></p>
+	<p>What is your major?            <input type="text" id="textEntered7"></p>
+
+	<p><input type="button" class="btn btn-primary" id="btn_1" value="Display Address"></p>
+	
+	<div id="textDisplayed1"></div> 
+	<div id="textDisplayed2"></div> 
+	<div id="textDisplayed3"></div> 
+	<div id="textDisplayed4"></div> 
+
+</body>
+<script>
+//
+// Using the input tags above, store user provided data in variables and then display:
+//		Your name
+//		Your address with city, state and zipcode
+//		Your telephone number
+//		Your college major
+//
+//
+
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the next comment block.  Do not alter     //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+
+$('#btn_1').click(function(){
+	
+	let your_name = $("#textEntered1").val();
+	$("#textDisplayed1").html("Hello " + your_name + "<br>");
+	
+	let your_address = $("#textEntered2").val();
+	let your_city = $("#textEntered3").val();
+	let your_state = $("#textEntered4").val();
+	let your_zip = $("#textEntered5").val();
+	$("#textDisplayed2").html("from " + your_address + " " + your_city + " " + your_state + " " + your_zip + "<br>");
+
+	let your_number = $("#textEntered6").val();
+	$("#textDisplayed3").html("who can be reached at " + your_number + "<br>");
+
+	let your_major = $("#textEntered7").val();
+	$("#textDisplayed4").html("and is studying " + your_major + "<br>");
+	
+})
+
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the previous comment block.  Do not alter //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+
+</script>
+</html>
