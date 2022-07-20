@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- **************************************************************************************** -->
+    <!-- *                                                                                      * -->
+    <!-- * Do not change anything within the <head></head> section of the HTML                  * -->
+    <!-- *                                                                                      * -->
+    <!-- **************************************************************************************** -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style> .btn{border:1px solid black; padding:5px;display:inline-block} </style>
+</head>
+<body>
+    <!-- **************************************************************************************** -->
+    <!-- *                                                                                      * -->
+    <!-- * Nothing to change here in the <body>                                                 * -->
+    <!-- *                                                                                      * -->
+    <!-- **************************************************************************************** -->
+	<div class="container">
+		<h1>Wacky Wally Widget Company</h1>
+
+		<p>Enter a product code and check if it is a valid pattern.</p>
+
+		<p>Product code: <input type="text" id="textEntered1"></p>
+
+		<p><input type="button" class="btn btn-primary" id="btn_1" value="Check"></p>
+		
+		<div id="textDisplayed1"></div> 
+	</div>
+</body>
+<script>
+//
+// Write a program that asks the user to enter a product code for
+// a product manufactured by the Wacky Wally Widget Company.  Your
+// program should inspect the product code and respond 
+// with "Valid" or "Not Valid" 
+//
+// Valid product codes are of the pattern 999-AAA where "999" is any
+// sequence of three digits and "AAA" is any sequence of three alpha
+// characters.  The Wacky Wally Widget Company treats upper and lower-case
+// letters in their product codes as the same.  That is, "AAA-999" is valid,
+// and Aaa-999 is valid, and aaa-999 is valid and they all refer
+// to the same product.
+//
+
+function isValidProductCode(code) {
+	
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the next comment block.  Do not alter     //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+	
+//error trapping: always check the bad condition, and if nor true, return the result
+// errors to check: 
+//length property of code. If not 7, we return not valid. 
+//check for the first 3 characters to be digits 
+//fourth character is not a dash, return not valid 
+// the last 3 characters should be should be alphabetical letters, if not, return not valid 
+
+//first property
+if (code.length != 7) {
+	return "Not Valid!";
+}
+
+//second property
+// error trapping for each character
+if (code[0] != parseInt(code[0])) {
+	return "Not Valid!";
+}
+
+if (code[1] != parseInt(code[1])) {
+	return "Not Valid!";
+}
+
+if (code[2] != parseInt(code[2])) {
+	return "Not Valid!";
+}
+
+//third property
+if (code[3] != "-") {
+	return "Not Valid!";
+}
+
+//fourth property: Capital A has lowest value, lowercase Z has highest value
+
+if (code[4] < "A") {
+	return "Not Valid!";
+}
+
+if (code[4] > "z") {
+	return "Not Valid!";
+}
+
+if (code[5] < "A") {
+	return "Not Valid!";
+}
+
+if (code[5] > "z") {
+	return "Not Valid!";
+}
+
+if (code[6] < "A") {
+	return "Not Valid!";
+}
+
+if (code[6] > "z") {
+	return "Not Valid!";
+}
+
+return "Valid!";
+
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the previous comment block.  Do not alter //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+}
+
+function number_two(code) {
+	let message = isValidProductCode(code); 
+
+	if (message == "Valid!") {
+		return "Success!"
+	} else {
+		return "Try Again!"
+	}
+}
+
+//do palindrome 
+
+$('#btn_1').click(function(){
+	//for exam: the $ sign means select. within that is the ID. So it's saying to look into the html code and select
+	// anything that has that ID. 
+	let productcode = $('#textEntered1').val();
+	$('#textDisplayed1').html(number_two(productcode));; 
+
+})
+</script>
+</html>
