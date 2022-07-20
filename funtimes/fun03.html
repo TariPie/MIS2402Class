@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>functions demo 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container">
+	<h1>Look at the web console!</h1>
+    <p>Some examples of functions!</p>
+</div>
+</body>
+
+
+<script>
+function convertToCelsius(degrees_fahrenheit){
+	let the_answer = (degrees_fahrenheit - 32) * ( 5/ 9 );
+	return the_answer.toFixed(2);
+}
+
+function feet_to_inches(HowManyFeet){
+	let x = HowManyFeet * 12;
+	return x;
+}
+
+console.clear();
+
+//notice how functions can be used in expressions
+console.log("One hundred feet is the same as: " + feet_to_inches(100) + " inches.");
+
+//notice how this convertToCelsius function is different than the 
+//function found in fun01.html
+console.log("One hundred degrees Fahrenheit is the same as: " + convertToCelsius(100) + " Celsius.");
+
+</script>
+
+</html>

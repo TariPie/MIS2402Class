@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 4 References -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Link to FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Simple JavaScript Demo</title>
+</head>
+<body>
+    <p>See the web developer console.</p>
+</body>
+<script>
+	"use strict";
+    console.clear();
+
+	/* In class activities */
+	
+	console.log("hello world");
+
+    let square_side_length = 45;
+    let area_of_square = square_side_length * square_side_length; 
+    console.log("The area of a square with a side length of " + square_side_length + " is " + area_of_square);
+
+    let square_perimeter = square_side_length * 4;
+    console.log("The perimeter of a square with a side length of " + square_side_length + " is " + square_perimeter);
+
+    let fahrenheit = 100; 
+    let celsius = (fahrenheit - 32) * 5/9; 
+    console.log(fahrenheit + " degrees fahrenheit equals " + celsius + " degress celsius");
+
+    /* Homework */
+
+    let tri_base = 10; 
+    let tri_height = 5; 
+    let tri_area = tri_base * tri_height * 0.5; 
+
+    console.log("The area of a triangle with a base of " + tri_base + " and a height of " + tri_height + " is " + tri_area.toFixed(2))
+    // info about toFixed: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+
+    let bmiHeight = 70;
+    let bmiHeightSquare = bmiHeight * bmiHeight;
+    let bmiWeight = 170;
+    let bmi = 703 * bmiWeight/bmiHeightSquare;
+
+    console.log("A person " + bmiHeight + " inches tall who weighs " + bmiWeight + " has a BMI of: " + bmi.toFixed(1));
+
+</script>
+</html>

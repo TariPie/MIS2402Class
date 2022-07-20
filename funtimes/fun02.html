@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>functions demo 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container">
+	<h1>Look at the web console!</h1>
+    <p>Some examples of functions!</p>
+</div>
+
+</body>
+
+<script>
+
+function bottles_of_beer_song(iterations){
+	for (var i = iterations; i > 0; i--){
+		console.log(i + ' bottles of beer on the wall, ' );
+		console.log(i + ' bottles of beer!');
+		console.log('Take one down, pass it around, ' );
+		console.log((i - 1) + ' bottles of beer on the wall!');
+		console.log(' '); //line break!
+	}
+}
+
+console.clear(); //this line gets executed first
+bottles_of_beer_song(5);
+
+</script>
+
+</html>

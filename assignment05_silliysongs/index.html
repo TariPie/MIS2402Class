@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Silly Songs</title>	<!--Error here: Didn't close title tag-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style>
+	 	.btn {border:1px solid black; 
+			padding:5px;
+			display:inline-block;
+		}
+			
+		.fancytext {
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 1.5em;
+			color: purple;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Silly Songs</h1>
+
+		<div id="textDisplayed1" class="fancytext"></div> 
+		<div id="textDisplayed2" class="fancytext"></div>
+		<div id="textDisplayed3" class="fancytext"></div>
+		<div id="textDisplayed4" class="fancytext"></div>
+		
+		<p>Answer the following questions.</p>
+	
+		<p>Noun: <input type="text" id="textNoun1"></p>
+		<p>Noun: <input type="text" id="textNoun2"></p>
+		<p>Noun: <input type="text" id="textNoun3"></p> <!-- Consistent ID names -->
+
+		<p>Noun (plural): <input type="text" id="textPluralNoun1"></p>
+	
+		<p>Place: <input type="text" id="textPlace1"></p>
+	
+		<p>Adjective: <input type="text" id="textAdjective1"></p>
+		
+		<p>Click one of the three buttons below for a "hilarious" Silly Song.</p>
+	
+		<p><input type="button" class="btn btn-primary" id="btn_1" value="Itsy Bitsy Spider"></p>
+		<p><input type="button" class="btn btn-primary" id="btn_2" value="Down by the bay"></p>
+		<p><input type="button" class="btn btn-primary" id="btn_3" value="Be Kind"></p>
+		<p><input type="button" class="btn btn-primary" id="btn_4" value="Twinkle Twinkle Little Star"></p>
+		
+	</div>
+	
+</body>
+
+<script>
+//
+// Write a program that prompts the user for three nouns, a plural noun, a place
+// and an adjective.  Use those values to generate silly song text.
+// Assign that silly song text to the HTML tag with the id of textDisplayed1
+"use strict";
+
+$('#btn_1').click(function(){ //button for Itsy Bitsy spider song
+	
+	let noun1 = $("#textNoun1").val();
+	let noun2 = $("#textNoun2").val();
+	let noun3 = $("#textNoun3").val();
+	let pluralnoun1 = $("#textPluralNoun1").val();
+	let place1 = $("#textPlace1").val();
+	let adjective1 = $("#textAdjective1").val();
+	
+	let theText = "The itsy bitsy " + noun1 + " climbed " + 
+		" up the " + noun2 + " spout. <br>" +
+		" Down came the " + noun3 + " and washed the " + noun1 + " out.<br>" + 
+		" Out came the sun, and dried up all the " + noun3 + ".<br> " + 
+		" And the " + adjective1 + " " + noun1 + " climbed up the spout again.";
+
+	$("#textDisplayed1").html(theText); 
+}); // error here - this funtion wasn't ended
+
+
+$('#btn_2').click(function(){ //button for down by the bay song
+	
+	let noun1 = $("#textNoun1").val();
+	let noun2 = $("#textNoun2").val();
+	let noun3 = $("#textNoun3").val();
+	let pluralnoun1 = $("#textPluralNoun1").val();
+	let place1 = $("#textPlace1").val();
+	let adjective1 = $("#textAdjective1").val();
+	
+	let theText = "Down by the " + noun1 +
+		", where the " + pluralnoun1 + " grow.<br>" + // Error here with extra quotation
+		"Back to my " + place1 + ", I dare not go. <br>" +
+		"For if I do, my " + noun2 + " will say,<br>" +
+		"'Did you ever see a " + noun3 + " wearing pajamas?'<br>" +
+		"down by the " + noun1 + "."; 
+
+	$("#textDisplayed2").html(theText);
+});
+
+$('#btn_3').click(function(){ //button for be kind song
+	
+	let noun1 = $("#textNoun1").val();
+	let noun2 = $("#textNoun2").val();
+	let noun3 = $("#textNoun3").val();
+	let pluralnoun1 = $("#textPluralNoun1").val();
+	let place1 = $("#textPlace1").val();
+	let adjective1 = $("#textAdjective1").val();
+	
+	let theText = "Be kind to your " + noun1 + 
+		"-footed "+ pluralnoun1  +". <br> " + 
+		" For a duck may be somebody's " + noun2 +". <br>" +
+		" Be kind to your " + pluralnoun1 +" in the " + place1 + ", <br>" + 
+		" where the weather is always very " + adjective1 + ".<br>" +
+		" You may think that this is the " + noun3 +". <br>" + 
+		" Well it is. ";
+
+	$("#textDisplayed3").html(theText);
+});
+
+$('#btn_4').click(function(){ //button for be kind song
+	
+	let noun1 = $("#textNoun1").val();
+	let noun2 = $("#textNoun2").val();
+	let noun3 = $("#textNoun3").val();
+	let pluralnoun1 = $("#textPluralNoun1").val();
+	let place1 = $("#textPlace1").val();
+	let adjective1 = $("#textAdjective1").val();
+	
+	let theText =  "Twinkle Twinkle " + adjective1 + " " + noun1 + ". <br>" + 
+		" How I wonder what you are. <br> " + 
+		" Up above the " + place1 + " so high. <br>" +
+		" Like a " + noun2 + " in the " + noun3 + "<br>" +
+		" Twinkle Twinkle " + adjective1 + " " + noun1 + ". <br>" + 
+		" How I wonder what you are. <br> ";
+
+	$("#textDisplayed4").html(theText);
+});
+
+</script>
+</html>

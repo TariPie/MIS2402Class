@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>functions demo 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container">
+	<h1>Look at the web console!</h1>
+    <p>Some examples of functions!</p>
+</div>
+
+</body>
+
+<script>
+
+function convertToCelsius(degrees_fahrenheit){
+	let the_answer = (degrees_fahrenheit - 32) * ( 5/ 9 );
+	return the_answer; //when you run a function, it skips the other functions that comes afterwards
+}
+
+function feet_to_inches(HowManyFeet){
+	let x = HowManyFeet * 12;
+	return x;
+}
+
+//notice that this function takes no parameters.  It has no
+//input, only output.
+function coinToss(){
+  let toss = Math.random();
+  let outcome = 'heads';
+  if (toss > .5){
+    outcome = 'tails';
+  }
+  return outcome; //this means to jump out of the boundaries 
+  //of the funtion, and then return 
+  //the value where it's needed outside of the function. 
+}
+
+console.log(convertToCelsius(32)); //32 is the executable statement degrees_fahrenheit
+console.log(convertToCelsius(100));
+console.log(convertToCelsius(212));
+
+console.log(feet_to_inches(6));  //convert 6 feet to inches
+
+console.log(feet_to_inches(6) + 3.5);  //6 feet, 3.5 inches
+
+console.log(coinToss());  // an example of a function that takes no parameters
+</script>
+
+</html>
